@@ -90,7 +90,7 @@ class SertifikatController extends Controller
         $sertifikat = Sertifikat::FindOrFail($id);
         $training = Training::all();
 
-        toast('Data has been Updated!', 'success')->position('bottom-end');
+
         return view('sertifikat.edit', compact('sertifikat', 'training'));
 
     }
@@ -103,7 +103,7 @@ class SertifikatController extends Controller
         $sertifikat->status = $request->status;
 
         $sertifikat->save();
-
+        toast('Data has been Updated!', 'success')->position('bottom-end');
         return redirect()->route('sertifikat.index')->with('success', 'Data berhasil ditambahkan');
 
     }
