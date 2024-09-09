@@ -16,15 +16,21 @@
 
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
-        <li class="menu-item">
-            <a href="" class="menu-link">
+         <li class="menu-item">
+            <a href="{{ route('home') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-dashboard"></i>
                 <div data-i18n="Analytics">Dashboard</div>
             </a>
         </li>
 
         <li class="menu-item">
-            <a href="" class="menu-link">
+            <a href="{{ route('training.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div data-i18n="Layouts">Training</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="{{ route('sertifikat.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-box"></i>
                 <div data-i18n="Layouts">Sertifikat</div>
             </a>

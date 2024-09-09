@@ -32,7 +32,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{asset('admin/assets/img/layouts/download.png')}}" />
+    <link rel="icon" type="image/x-icon" href="{{asset('admin/assets/img/favicon/logo.jpg')}}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -63,6 +63,8 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ asset('admin/assets/js/config.js') }}"></script>
+    @include('sweetalert::alert')
+
     @yield('css')
     @yield('styles')
   </head>

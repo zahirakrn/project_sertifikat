@@ -6,9 +6,19 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "barryvdh/laravel-dompdf": "^3.0",
+        "dompdf/dompdf": "^3.0",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
-        "laravel/ui": "^4.5"
+        "laravel/ui": "^4.5",
+        "nesbot/carbon": "^3.8",
+        "realrashid/sweet-alert": "^7.2",
+        "setasign/fpdf": "^1.8",
+        "setasign/fpdi": "^2.6",
+        "setasign/fpdi-tcpdf": "^2.3",
+        "spatie/pdf-to-image": "^1.2",
+        "tecnickcom/tcpdf": "^6.7",
+        "yajra/laravel-datatables-oracle": "11.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
