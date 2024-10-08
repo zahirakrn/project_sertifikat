@@ -10,20 +10,20 @@ class Training extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id',
-        'nama_training',
-        'tanggal_mulai',
-        'tanggal_selesai',
-        'kode',
-        'konten',
-        'cover',
+        'id' ,
+        'nama_training' ,
+        'tanggal_mulai' ,
+        'tanggal_selesai' ,
+        'kode' ,
+        'konten' ,
+        'cover'
     ];
     public $timestamps = true;
 
     // relasi ke tabel sertifikat
     public function sertifikat()
     {
-        return $this->hasMany(Sertifikat::class);
+        return $this->hasMany(Sertifikat::class, 'id_training', 'id');
     }
 
     //menghapus img

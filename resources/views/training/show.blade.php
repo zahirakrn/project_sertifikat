@@ -6,13 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+        <title>Show Data Pelatihan</title>
+        <meta name="description" content="" />
+        <link rel="icon" href="{{ asset('assets/img/logo/logo.png') }}">
 
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
-
-    <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,10 +31,7 @@
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
-
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/apex-charts/apex-charts.css') }}" />
-
-    <!-- Page CSS -->
 
     <!-- Helpers -->
     <script src="{{ asset('assets/vendor/js/helpers.js') }}"></script>
@@ -61,7 +57,7 @@
                     <!-- Content -->
 
                     <div class="container-xxl flex-grow-1 container-p-y">
-                        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Training/</span> Edit Data
+                        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Training/</span> Data Detail
                         </h4>
 
                         <!-- Basic Layout & Basic with Icons -->
@@ -70,9 +66,9 @@
                             <div class="col-7">
                                 <div class="card mb-4">
                                     <div class="card-header d-flex align-items-center justify-content-between">
-                                        <h5 class="mb-0">Edit Data Training table
+                                        <h5 class="mb-0"><b style="color: #0B2B8A">DETAIL DATA</b>
+                                            <hr style="height: 3px; width: 95%; background-color: #0B2B8A">
                                         </h5>
-                                        <small class="text-muted float-end">Merged input group</small>
                                     </div>
                                     <div class="card-body">
                                         <form action="{{ route('training.update', $training->id) }}" method="post"
@@ -85,8 +81,7 @@
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
                                                         <span id="basic-icon-default-fullname2"
-                                                            class="input-group-text"><i
-                                                                class='bx bx-category'></i></span>
+                                                            class="input-group-text"><i class='bx bx-category'></i></span>
                                                         <input type="text" class="form-control" disabled
                                                             id="basic-icon-default-fullname"
                                                             placeholder="AI Development" aria-label="John Doe"
@@ -102,10 +97,9 @@
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
                                                         <span id="basic-icon-default-company2"
-                                                            class="input-group-text"><i
-                                                                class="bx bx-buildings"></i></span>
-                                                        <input class="form-control" type="date" name="tanggal_mulai" disabled
-                                                            id="html5-date-input" style="padding-left: 15px;"
+                                                            class="input-group-text"><i class="bx bx-buildings"></i></span>
+                                                        <input class="form-control" type="date" name="tanggal_mulai"
+                                                            disabled id="html5-date-input" style="padding-left: 15px;"
                                                             value="{{ $training->tanggal_mulai }}" />
                                                     </div>
                                                 </div>
@@ -116,10 +110,10 @@
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
                                                         <span id="basic-icon-default-company2"
-                                                            class="input-group-text"><i
-                                                                class="bx bx-buildings"></i></span>
+                                                            class="input-group-text"><i class="bx bx-buildings"></i></span>
                                                         <input class="form-control" name="tanggal_selesai" disabled
-                                                            type="date" id="html5-date-input" style="padding-left: 15px;"
+                                                            type="date" id="html5-date-input"
+                                                            style="padding-left: 15px;"
                                                             value="{{ $training->tanggal_selesai }}" />
                                                     </div>
                                                 </div>
@@ -130,33 +124,14 @@
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
                                                         <span id="basic-icon-default-fullname2"
-                                                            class="input-group-text"><i
-                                                                class='bx bx-category'></i></span>
+                                                            class="input-group-text"><i class='bx bx-category'></i></span>
                                                         <input type="text" class="form-control"
-                                                            id="basic-icon-default-fullname" style="padding-left: 15px;"
-                                                            placeholder="AI Development" aria-label="John Doe"
-                                                            name="kode" value="{{ $training->kode }}" disabled
+                                                            id="basic-icon-default-fullname"
+                                                            style="padding-left: 15px;" placeholder="AI Development"
+                                                            aria-label="John Doe" name="kode"
+                                                            value="{{ $training->kode }}" disabled
                                                             aria-describedby="basic-icon-default-fullname2" />
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <label class="col-sm-2 form-label" for="basic-icon-default-message">Isi
-                                                    Konten</label>
-                                                <div class="col-sm-10">
-                                                    <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-message2" disabled
-                                                            class="input-group-text"><i
-                                                                class="bx bx-comment"></i></span>
-                                                        <textarea id="basic-icon-default-message" disabled class="form-control" name="konten" style="padding-left: 15px;"
-                                                            >{{ $training->konten }}</textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-5" style="margin-left: 16.6%;">
-                                                    <a href="{{ route('training.index') }}"
-                                                        class="btn btn-danger">Back</a>
                                                 </div>
                                             </div>
                                         </form>
@@ -171,53 +146,90 @@
                                             @csrf
                                             @method('PUT')
                                             <div class="row mb-3">
-                                                <h4 class="card-title">Cover</h4>
+                                                <h5 class="card-title"><b style="color: #0B2B8A ">COVER IMAGE</b>
+                                                    <hr style="height: 3px; width: 31%; background-color: #0B2B8A">
+                                                </h5>
                                                 @csrf
                                                 <center><img class="card"
                                                         src="{{ asset('images/training/' . $training->cover) }}"
-                                                        width="350"></center>
-
+                                                        width="310">
+                                                </center>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-5" style="margin-left: 4.5%; margin-top: 3.5%;">
+                                                    <a href="{{ route('training.index') }}" class="btn btn-danger"><i
+                                                            class='bx bx-arrow-back'></i> Back</a>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <label class="col-sm-2 form-label" for="basic-icon-default-message">
+                                            <h5><b style="color: #0B2B8A">Deskripsi</b></h5>
+                                            <hr style="height: 3px; width: 54%; background-color: #0B2B8A">
+                                        </label>
+                                        <div class="col-sm-11" style="">
+                                            <div class="input-group input-group-merge" style="margin-left: 40px;">
+                                                {!! $training->konten !!}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- / Content -->
+
+                        <div class="content-backdrop fade"></div>
                     </div>
-                    <!-- / Content -->
-
-
-                    <div class="content-backdrop fade"></div>
+                    <!-- Content wrapper -->
                 </div>
-                <!-- Content wrapper -->
+                <!-- / Layout page -->
             </div>
-            <!-- / Layout page -->
+
+            <!-- Overlay -->
+            <div class="layout-overlay layout-menu-toggle"></div>
         </div>
+        <!-- / Layout wrapper -->
 
-        <!-- Overlay -->
-        <div class="layout-overlay layout-menu-toggle"></div>
-    </div>
-    <!-- / Layout wrapper -->
+        <!-- / CKEditor 5 -->
+        <script src="https://cdn.ckeditor.com/ckeditor5/39.0.0/classic/ckeditor.js"></script>
 
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="{{ asset('assets/vendor/libs/jquery/jquery.js') }}"></script>
-    <script src="{{ asset('assets/vendor/libs/popper/popper.js') }}"></script>
-    <script src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>
-    <script src="{{ asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var textarea = document.getElementById('basic-icon-default-message');
 
-    <script src="{{ asset('assets/vendor/js/menu.js') }}"></script>
-    <!-- endbuild -->
+                function adjustTextareaHeight() {
+                    textarea.style.height = 'auto'; // Reset height to auto to get the full content height
+                    textarea.style.height = textarea.scrollHeight + 'px'; // Set height to scrollHeight
+                }
 
-    <!-- Vendors JS -->
+                adjustTextareaHeight(); // Adjust height on page load
 
-    <!-- Main JS -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+                // Optional: Adjust height on input if the textarea is editable
+                textarea.addEventListener('input', adjustTextareaHeight);
+            });
+        </script>
 
-    <!-- Page JS -->
+        <!-- Core JS -->
+        <!-- build:js assets/vendor/js/core.js -->
+        <script src="{{ asset('assets/vendor/libs/jquery/jquery.js') }}"></script>
+        <script src="{{ asset('assets/vendor/libs/popper/popper.js') }}"></script>
+        <script src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>
+        <script src="{{ asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+        <script src="{{ asset('assets/vendor/js/menu.js') }}"></script>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <!-- endbuild -->
 
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+        <!-- Main JS -->
+        <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>

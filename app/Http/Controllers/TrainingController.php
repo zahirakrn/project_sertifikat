@@ -6,30 +6,58 @@ use App\Models\Training;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
+// indonesia
+Carbon::setLocale('id');
+
 class TrainingController extends Controller
 {
+    // Fungsi untuk nge format tanggal dengan ordinal
+    private function formatWithOrdinal($date)
+    {
+        $day = $date->day;
+
+        // Tentukan suffix
+        if ($day % 100 >= 11 && $day % 100 <= 13) {
+            $suffix = 'th'; // pengecualian untuk hari ke 11, 12, dan 13
+        } elseif ($day % 10 == 1) {
+            $suffix = 'st';
+        } elseif ($day % 10 == 2) {
+            $suffix = 'nd';
+        } elseif ($day % 10 == 3) {
+            $suffix = 'rd';
+        } else {
+            $suffix = 'th';
+        }
+
+        return $date->format('j') . $suffix;
+    }
+
     public function index()
     {
         // Retrieve all trainings ordered by the created date
-        $training = Training::orderBy('created_at', 'desc')->get();
+        $training = Training::withCount('sertifikat')
+            ->orderBy('created_at', 'desc')
+            ->get();
 
         // Add formatted date range to each training
         foreach ($training as $data) {
             $startDate = Carbon::parse($data->tanggal_mulai);
             $endDate = Carbon::parse($data->tanggal_selesai);
 
-            // Check if the start and end dates are in the same month
+            // Format dates with ordinal suffix
+            $formattedStartDate = $this->formatWithOrdinal($startDate);
+            $formattedEndDate = $this->formatWithOrdinal($endDate);
+
             if ($startDate->format('F Y') === $endDate->format('F Y')) {
-                $formattedStartDate = $startDate->format('j');
-                $formattedEndDate = $endDate->format('j');
-                $formattedMonth = $startDate->translatedFormat('F');
+                $formattedMonth = $startDate->translatedFormat('F'); // Menggunakan translatedFormat untuk bahasa
                 $formattedYear = $startDate->translatedFormat('Y');
 
-                $data->formatted_tanggal = "{$formattedMonth} {$formattedStartDate} - {$formattedEndDate} , {$formattedYear}";
+                // Mengubah format tanggal menjadi bahasa Indonesia
+                $data->formatted_tanggal = "{$formattedMonth} {$formattedStartDate} - {$formattedEndDate}, {$formattedYear}";
             } else {
-                // Different months
-                $formattedStartDate = $startDate->format('F j');
-                $formattedEndDate = $endDate->format('F j ,Y');
+                // Bulan yang berbeda
+                $formattedStartDate = $startDate->translatedFormat('F j'); // Menggunakan translatedFormat untuk bahasa
+                $formattedEndDate = $endDate->translatedFormat('F j, Y');
 
                 $data->formatted_tanggal = "{$formattedStartDate} - {$formattedEndDate}";
             }
@@ -37,6 +65,7 @@ class TrainingController extends Controller
 
         return view('training.index', compact('training'));
     }
+
     public function create()
     {
         return view('training.create');
@@ -45,6 +74,11 @@ class TrainingController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'nama_training' => 'required|string|max:255|unique:trainings,nama_training',
+            'kode' => 'required|string|max:50|unique:trainings,kode',
+        ]);
+
         $training = new Training;
         $training->nama_training = $request->nama_training;
         $training->tanggal_mulai = $request->tanggal_mulai;
@@ -62,7 +96,7 @@ class TrainingController extends Controller
 
         $training->save();
 
-        toast('Data has been Created!', 'success')->position('bottom-end');
+        toast('Data has been Created!', 'success')->position('top-end');
         return redirect()->route('training.index');
     }
 
@@ -81,6 +115,7 @@ class TrainingController extends Controller
     }
     public function update(Request $request, $id)
     {
+
         $training = Training::FindOrFail($id);
 
         $training->nama_training = $request->nama_training;
@@ -99,7 +134,7 @@ class TrainingController extends Controller
 
         $training->save();
 
-        toast('Data has been Updated!', 'success')->position('bottom-end');
+        toast('Data has been Updated!', 'success')->position('top-end');
         return redirect()->route('training.index');
 
     }
@@ -109,8 +144,9 @@ class TrainingController extends Controller
         $training = Training::FindOrFail($id);
         $training->delete();
 
-        toast('Data has been Deleted!', 'success')->position('bottom-end');
+        toast('Data has been Deleted!', 'success')->position('top-end');
         return redirect()->route('training.index');
 
     }
+
 }

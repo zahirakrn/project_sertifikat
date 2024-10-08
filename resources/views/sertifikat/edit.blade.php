@@ -59,18 +59,16 @@
                 <!-- Content wrapper -->
                 <div class="content-wrapper">
                     <!-- Content -->
-
                     <div class="container-xxl flex-grow-1 container-p-y">
-                        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Sertifikat/</span> Edit Data
+                        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Peserta/</span> Edit Data
                         </h4>
-
                         <!-- Basic Layout & Basic with Icons -->
                         <div class="row">
                             <!-- Basic with Icons -->
                             <div class="col-xxl">
                                 <div class="card mb-4">
                                     <div class="card-header d-flex align-items-center justify-content-between">
-                                        <h5 class="mb-0">Add Data Sertifikat table
+                                        <h5 class="mb-0">Add Data Peserta table
                                         </h5>
                                         <small class="text-muted float-end">Merged input group</small>
                                     </div>
@@ -84,13 +82,8 @@
                                                     for="basic-icon-default-fullname">Nama Penerima</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-fullname2"
-                                                            class="input-group-text"><i
-                                                                class='bx bx-category'></i></span>
-                                                        <input type="text" class="form-control"
-                                                            id="basic-icon-default-fullname"
-                                                            placeholder="AI Development" aria-label="John Doe"
-                                                            name="nama_penerima"
+                                                        <span id="basic-icon-default-fullname2" class="input-group-text"><i class='bx bx-category'></i></span>
+                                                        <input type="text" class="form-control" id="basic-icon-default-fullname" placeholder="AI Development" aria-label="John Doe" name="nama_penerima"
                                                             aria-describedby="basic-icon-default-fullname2"
                                                             value="{{ $sertifikat->nama_penerima }}" />
                                                     </div>
@@ -101,11 +94,8 @@
                                                     for="basic-icon-default-company">Jenis Pelatihan</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-fullname2"
-                                                            class="input-group-text"><i
-                                                                class='bx bx-category'></i></span>
-                                                        <select id="defaultSelect" class="form-select"
-                                                            name="id_training" value="{{ $sertifikat->id_training }}">
+                                                        <span id="basic-icon-default-fullname2"class="input-group-text"><i class='bx bx-category'></i></span>
+                                                        <select id="defaultSelect" class="form-select" name="id_training" value="{{ $sertifikat->id_training }}">
                                                             <option>Default select</option>
                                                             @foreach ($training as $data)
                                                                 <option value="{{ $data->id }}"
@@ -121,11 +111,8 @@
                                                     for="basic-icon-default-company">Status</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-fullname2"
-                                                            class="input-group-text"><i
-                                                                class='bx bx-category'></i></span>
-                                                        <select class="form-control" id="status" name="status"
-                                                            aria-describedby="basic-icon-default-fullname2">
+                                                        <span id="basic-icon-default-fullname2" class="input-group-text"><i class='bx bx-category'></i></span>
+                                                        <select class="form-control" id="status" name="status" aria-describedby="basic-icon-default-fullname2">
                                                             <option value="0"
                                                                 {{ $sertifikat->status == 0 ? 'selected' : '' }}>Belum
                                                                 Selesai</option>
@@ -181,7 +168,6 @@
             </div>
             <!-- / Layout page -->
         </div>
-
         <!-- Overlay -->
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>

@@ -84,13 +84,8 @@
                                                     for="basic-icon-default-fullname">Jenis Training</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-fullname2"
-                                                            class="input-group-text"><i
-                                                                class='bx bx-category'></i></span>
-                                                        <input type="text" class="form-control"
-                                                            id="basic-icon-default-fullname"
-                                                            placeholder="AI Development" aria-label="John Doe"
-                                                            name="nama_training"
+                                                        <span id="basic-icon-default-fullname2" class="input-group-text"><i class='bx bx-category'></i></span>
+                                                        <input type="text" class="form-control" id="basic-icon-default-fullname" placeholder="AI Development" aria-label="John Doe" name="nama_training"
                                                             aria-describedby="basic-icon-default-fullname2" value="{{ $training->nama_training }}"/>
                                                     </div>
                                                 </div>
@@ -100,9 +95,7 @@
                                                     for="basic-icon-default-company">Tanggal Mulai</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-company2"
-                                                            class="input-group-text"><i
-                                                                class="bx bx-buildings"></i></span>
+                                                        <span id="basic-icon-default-company2" class="input-group-text"><i class="bx bx-buildings"></i></span>
                                                         <input class="form-control" type="date" name="tanggal_mulai"
                                                              id="html5-date-input" value="{{ $training->tanggal_mulai }}"/>
                                                     </div>
@@ -113,11 +106,8 @@
                                                     for="basic-icon-default-company">Tanggal Selesai</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-company2"
-                                                            class="input-group-text"><i
-                                                                class="bx bx-buildings"></i></span>
-                                                        <input class="form-control" name="tanggal_selesai"
-                                                            type="date" id="html5-date-input" value="{{ $training->tanggal_selesai }}" />
+                                                        <span id="basic-icon-default-company2" class="input-group-text"><i class="bx bx-buildings"></i></span>
+                                                        <input class="form-control" name="tanggal_selesai" type="date" id="html5-date-input" value="{{ $training->tanggal_selesai }}" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -126,12 +116,8 @@
                                                     for="basic-icon-default-fullname">Kode</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-fullname2"
-                                                            class="input-group-text"><i
-                                                                class='bx bx-category'></i></span>
-                                                        <input type="text" class="form-control"
-                                                            id="basic-icon-default-fullname"
-                                                            placeholder="AI Development" aria-label="John Doe"
+                                                        <span id="basic-icon-default-fullname2" class="input-group-text" class='bx bx-category'></i></span>
+                                                        <input type="text" class="form-control" id="basic-icon-default-fullname" placeholder="AI Development" aria-label="John Doe"
                                                             name="kode" value="{{ $training->kode }}"
                                                             aria-describedby="basic-icon-default-fullname2" />
                                                     </div>
@@ -142,10 +128,8 @@
                                                     for="basic-icon-default-phone">Cover</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-phone2" class="input-group-text"><i
-                                                                class='bx bx-image'></i></span>
-                                                        <input class="form-control" type="file" id="formFile"
-                                                            name="cover" />
+                                                        <span id="basic-icon-default-phone2" class="input-group-text"><i class='bx bx-image'></i></span>
+                                                        <input class="form-control" type="file" id="formFile" name="cover" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -154,9 +138,7 @@
                                                     for="basic-icon-default-message">Isi Konten</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-message2"
-                                                            class="input-group-text"><i
-                                                                class="bx bx-comment"></i></span>
+                                                        <span id="basic-icon-default-message2" class="input-group-text"><i class="bx bx-comment"></i></span>
                                                         <textarea id="basic-icon-default-message" class="form-control" name="konten"
                                                             aria-describedby="basic-icon-default-message2">{{ $training->konten }}</textarea>
                                                     </div>
@@ -179,15 +161,12 @@
                         </div>
                     </div>
                     <!-- / Content -->
-
-
                     <div class="content-backdrop fade"></div>
                 </div>
                 <!-- Content wrapper -->
             </div>
             <!-- / Layout page -->
         </div>
-
         <!-- Overlay -->
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
@@ -213,5 +192,4 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
-
 </html>

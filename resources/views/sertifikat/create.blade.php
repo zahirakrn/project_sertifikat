@@ -7,9 +7,9 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Create Peserta</title>
+    <link rel="icon" href="{{ asset('assets/img/logo/logo.png') }}">
 
-    <meta name="description" content="" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
@@ -63,14 +63,13 @@
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Sertifikat/</span> Add Data
                         </h4>
-
                         <!-- Basic Layout & Basic with Icons -->
                         <div class="row">
                             <!-- Basic with Icons -->
                             <div class="col-xxl">
                                 <div class="card mb-4">
                                     <div class="card-header d-flex align-items-center justify-content-between">
-                                        <h5 class="mb-0">Add Data Sertifikat table
+                                        <h5 class="mb-0">Add Data Peserta table
                                         </h5>
                                         <small class="text-muted float-end">Merged input group</small>
                                     </div>
@@ -83,14 +82,8 @@
                                                     for="basic-icon-default-fullname">Nama Penerima</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-fullname2"
-                                                            class="input-group-text"><i
-                                                                class='bx bx-category'></i></span>
-                                                        <input type="text" class="form-control"
-                                                            id="basic-icon-default-fullname"
-                                                            placeholder="Enter Name" aria-label="John Doe"
-                                                            name="nama_penerima"
-                                                            aria-describedby="basic-icon-default-fullname2" />
+                                                        <span id="basic-icon-default-fullname2" class="input-group-text"><i class='bx bx-category'></i></span>
+                                                        <input type="text" class="form-control" id="basic-icon-default-fullname" placeholder="Enter Name" aria-label="John Doe" name="nama_penerima" aria-describedby="basic-icon-default-fullname2" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -99,14 +92,8 @@
                                                     for="basic-icon-default-fullname">Nomor Sertifikat</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-fullname2"
-                                                            class="input-group-text"><i
-                                                                class='bx bx-category'></i></span>
-                                                        <input type="text" class="form-control"
-                                                            id="basic-icon-default-fullname"
-                                                            placeholder="NO. 001/DEV-AIDEV/VI/2024" aria-label="John Doe"
-                                                            name="nomor_sertifikat"
-                                                            aria-describedby="basic-icon-default-fullname2" />
+                                                        <span id="basic-icon-default-fullname2" class="input-group-text"><i class='bx bx-category'></i></span>
+                                                        <input type="text" class="form-control" id="basic-icon-default-fullname" placeholder="NO. 001/DEV-AIDEV/VI/2024" aria-label="John Doe" name="nomor_sertifikat" aria-describedby="basic-icon-default-fullname2" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -115,12 +102,8 @@
                                                     for="basic-icon-default-company">Tanggal Mulai</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-company2"
-                                                            class="input-group-text"><i
-                                                                class="bx bx-buildings"></i></span>
-                                                        <input class="form-control" type="date" name="tanggal_mulai"
-                                                            id="tanggal_mulai" value="2024-01-01"
-                                                            id="html5-date-input" />
+                                                        <span id="basic-icon-default-company2" class="input-group-text"><i class="bx bx-buildings"></i></span>
+                                                        <input class="form-control" type="date" name="tanggal_mulai" id="tanggal_mulai" value="2024-01-01"  id="html5-date-input" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -129,12 +112,8 @@
                                                     for="basic-icon-default-company">Tanggal Selesai</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-company2"
-                                                            class="input-group-text"><i
-                                                                class="bx bx-buildings"></i></span>
-                                                        <input class="form-control" name="tanggal_selesai"
-                                                            id="tanggal_selesai" type="date" value="2024-01-01"
-                                                            id="html5-date-input" />
+                                                        <span id="basic-icon-default-company2" class="input-group-text"><i class="bx bx-buildings"></i></span>
+                                                        <input class="form-control" name="tanggal_selesai" id="tanggal_selesai" type="date" value="2024-01-01" id="html5-date-input" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -143,11 +122,8 @@
                                                     for="basic-icon-default-company">Jenis Pelatihan</label>
                                                 <div class="col-sm-10">
                                                     <div class="input-group input-group-merge">
-                                                        <span id="basic-icon-default-fullname2"
-                                                            class="input-group-text"><i
-                                                                class='bx bx-category'></i></span>
-                                                        <select id="defaultSelect" class="form-select"
-                                                            name="id_training">
+                                                        <span id="basic-icon-default-fullname2" class="input-group-text"><i class='bx bx-category'></i></span>
+                                                        <select id="defaultSelect" class="form-select" name="id_training">
                                                             <option>Pilih Jenis Pelatihan</option>
                                                             @foreach ($training as $data)
                                                                 <option value="{{ $data->id }}">
@@ -175,20 +151,16 @@
                         </div>
                     </div>
                     <!-- / Content -->
-
-
                     <div class="content-backdrop fade"></div>
                 </div>
                 <!-- Content wrapper -->
             </div>
             <!-- / Layout page -->
         </div>
-
         <!-- Overlay -->
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
     <!-- / Layout wrapper -->
-
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     {{-- date range --}}
@@ -219,5 +191,4 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
-
 </html>
