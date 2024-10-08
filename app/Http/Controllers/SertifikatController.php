@@ -76,7 +76,7 @@ class SertifikatController extends Controller
         $sertifikat->id_training = $request->id_training;
         $sertifikat->save();
 
-        toast('Data has been submited!', 'success')->position('bottom-end');
+        toast('Data has been submited!', 'success')->position('top-end');
         return redirect()->route('sertifikat.index');
 
     }

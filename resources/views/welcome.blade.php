@@ -69,7 +69,7 @@
                     <div class="container justify-content-center"></div>
                     <div class="col-lg-8 wow fadeInUp text-center" data-wow-delay="0.1s">
                         <!-- Form untuk mengecek sertifikat -->
-                        <form action="{{ route('checkCertificate') }}" method="POST">
+                        <form action="{{ route('checkCertificate') }}" method="GET">
                             @csrf
                             <label for="no_sertifikat" class="form-label text-center">
                                 <h3 >Masukan No. Sertifikat</h3>
@@ -77,7 +77,7 @@
                             <input type="text" class="form-control text-center nomor_sertifikat"
                                 placeholder="NO. XXX/XX-XXX/XX/XXXX" id="no_sertifikat" name="nomor_sertifikat"
                                 style="width:855px;">
-                            <button class="btn btn-primary mt-4 w-100" type="submit">Cek</button>
+                            <button class="btn btn-primary mt-4" style="width: 855px" type="submit">Cek</button>
                         </form>
                         <!-- Tempat untuk menampilkan hasil -->
                         <div id="" class="mt-4">
@@ -105,7 +105,6 @@
                         <h1 class="display-4"> Offering the Best Consulting & Professional Services</h1>
                     </div>
                     <div class="row g-4 justify-content-center text-center">
-
                         @foreach ($limitTraining as $data)
                             <div class="col-md-6 col-lg-4 col-xl-3  wow fadeInUp" data-wow-delay="0.1s">
                                 <a href="{{ url('pelatihan', $data->id) }}">
@@ -118,8 +117,7 @@
                                         </div>
                                         <div class="service-content text-center p-4 flex-grow-1 d-flex flex-column">
                                             <div class="service-content-inner mb-auto">
-                                                <a href="#" class="h4 mb-4 d-inline-flex text-start"><i
-                                                        class="fas fa-donate fa-2x me-2"></i>{{ $data->nama_training }}</a>
+                                                <a href="#" class="h4 mb-4 d-inline-flex text-start">{{ $data->nama_training }}</a>
                                                 <p class="mb-4">
                                                     {{ $data->formatted_tanggal_training }}
                                                 </p>
@@ -134,7 +132,7 @@
 
                         <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                             <a class="btn btn-primary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s"
-                                href="{{ route('more') }}">More Services</a>
+                                href="{{ route('more') }}">More</a>
                         </div>
                     </div>
                 </div>

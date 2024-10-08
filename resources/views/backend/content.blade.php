@@ -142,7 +142,7 @@
                                     <div style="margin-top : 5%; margin-left : 5%"
                                         class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
                                         <div class="card-title">
-                                            <h5 class="text-nowrap mb-2">Profile Report</h5>
+                                            <h5 class="text-nowrap mb-2">Training Report</h5>
                                         </div>
                                         <div class="mt-sm-auto">
                                             <small class="text-success text-nowrap fw-semibold"><i
@@ -159,7 +159,9 @@
             </div>
             <div class="content-backdrop fade"></div>
         </div>
-        
+
         <!-- Content wrapper -->
     </div>
+    <br>
+    @include('backend.footer') <br>
     <!-- / Layout page -->

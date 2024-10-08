@@ -68,8 +68,6 @@
                             <div data-i18n="Account">Role</div>
                         </a>
                     </li>
-
-
                 </ul>
             </li>
         @endif
