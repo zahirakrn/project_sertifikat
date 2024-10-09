@@ -142,8 +142,7 @@
                                                             <div class="modal-body">
                                                                 <div class="row">
                                                                     <div class="col mb-3">
-                                                                        <label for="nameWithTitle" class="form-label">Nama
-                                                                            User</label>
+                                                                        <label for="nameWithTitle" class="form-label">Nama User</label>
                                                                         <div class="input-group input-group-merge">
                                                                             <span id="basic-icon-default-fullname2"
                                                                                 class="input-group-text"><i
@@ -287,8 +286,7 @@
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-outline-secondary"
                                                                     data-bs-dismiss="modal">Close</button>
-                                                                <button type="submit" class="btn btn-primary">Save
-                                                                    changes</button>
+                                                                <button type="submit" class="btn btn-primary">Save changes</button>
                                                             </div>
                                                         </form>
                                                     </div>

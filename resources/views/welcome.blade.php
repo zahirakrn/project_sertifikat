@@ -96,49 +96,52 @@
     <!-- Cek Sertifikat End -->
 
     <!-- Services Start -->
-    <div class="container-fluid service py-5 bg-light" id="service" style="margin-top: -10rem;">
-        <div class="container py-5">
-            <div class="container-fluid service py-5 bg-light" id="service">
-                <div class="container py-5">
-                    <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                        <h4 class="text-primary">Our Services</h4>
-                        <h1 class="display-4"> Offering the Best Consulting & Professional Services</h1>
-                    </div>
-                    <div class="row g-4 justify-content-center text-center">
-                        @foreach ($limitTraining as $data)
-                            <div class="col-md-6 col-lg-4 col-xl-3  wow fadeInUp" data-wow-delay="0.1s">
-                                <a href="{{ url('pelatihan', $data->id) }}">
+        <!-- Services Start -->
+        <div class="container-fluid service py-5 bg-light" id="service" style="margin-top: -10rem;">
+            <div class="container py-5">
+                <div class="container-fluid service py-5 bg-light" id="service">
+                    <div class="container py-5">
+                        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                            <h4 class="text-primary">Our Services</h4>
+                            <h1 class="display-4"> Offering the Best Consulting & Professional Services</h1>
+                        </div>
+                        <div class="row g-4 justify-content-center text-center">
 
-                                    <div class="service-item bg-light rounded d-flex flex-column h-100">
+                            @foreach ($limitTraining as $data)
+                                <div class="col-md-6 col-lg-4 col-xl-3  wow fadeInUp" data-wow-delay="0.1s">
+                                    <a href="{{ url('pelatihan', $data->id) }}">
 
-                                        <div class="service-img">
-                                            <img src="{{ asset('images/training/' . $data->cover) }}"
-                                                class="img-fluid w-100 rounded-top fixed-img" alt="">
-                                        </div>
-                                        <div class="service-content text-center p-4 flex-grow-1 d-flex flex-column">
-                                            <div class="service-content-inner mb-auto">
-                                                <a href="#" class="h4 mb-4 d-inline-flex text-start">{{ $data->nama_training }}</a>
-                                                <p class="mb-4">
-                                                    {{ $data->formatted_tanggal_training }}
-                                                </p>
+                                        <div class="service-item bg-light rounded d-flex flex-column h-100">
+
+                                            <div class="service-img">
+                                                <img src="{{ asset('images/training/' . $data->cover) }}"
+                                                    class="img-fluid w-100 rounded-top fixed-img" alt="">
                                             </div>
-                                            <a class="btn btn-light rounded-pill py-2 px-4 mt-auto" id="read_more"
-                                                href="{{ url('pelatihan', $data->id) }}">Read More</a>
+                                            <div class="service-content text-center p-4 flex-grow-1 d-flex flex-column">
+                                                <div class="service-content-inner mb-auto">
+                                                    <a href="#" class="h4 mb-4 d-inline-flex text-start"><i
+                                                            class="fas fa-donate fa-2x me-2"></i>{{ $data->nama_training }}</a>
+                                                    <p class="mb-4">
+                                                        {{ $data->formatted_tanggal_training }}
+                                                    </p>
+                                                </div>
+                                                <a class="btn btn-light rounded-pill py-2 px-4 mt-auto" id="read_more"
+                                                    href="{{ url('pelatihan', $data->id) }}">Read More</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                        @endforeach
+                                    </a>
+                                </div>
+                            @endforeach
 
-                        <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                            <a class="btn btn-primary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s"
-                                href="{{ route('more') }}">More</a>
+                            <div class="col-12 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 5%;">
+                                <a class="btn btn-primary rounded-pill py-3 px-5 wow fadeInUp" data-wow-delay="0.1s"
+                                    href="{{ route('more') }}">More Services</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     <!-- Services End -->
 
     <!-- About Start -->
@@ -161,16 +164,12 @@
                         diperlengkapi dengan keahlian terbaik untuk bersaing di dunia kerja.</p>
                     <div class="row g-4 justify-content-between mb-5">
                         <div class="col-lg-6 col-xl-5">
-                            <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Pelatihan
-                                Berkualitas</p>
-                            <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i>
-                                Sertifikasi Resmi</p>
+                            <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Pelatihan Berkualitas</p>
+                            <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Sertifikasi Resmi</p>
                         </div>
                         <div class="col-lg-6 col-xl-7">
-                            <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Program
-                                Fleksibel</p>
-                            <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i>
-                                Instruktur Berpengalaman</p>
+                            <p class="text-dark"><i class="fas fa-check-circle text-primary me-1"></i> Program Fleksibel</p>
+                            <p class="text-dark mb-0"><i class="fas fa-check-circle text-primary me-1"></i> Instruktur Berpengalaman</p>
                         </div>
                     </div>
                     <div class="row g-4 justify-content-between mb-5">
