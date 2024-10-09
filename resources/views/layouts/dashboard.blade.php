@@ -8,7 +8,7 @@
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <title>Dashboard</title>
     <meta name="description" content="" />
-    <link rel="icon" href="{{ asset('assets/img/logo/logo.png') }}">
+    <link rel="icon" href="{{ asset('assets/img/logo-bartech-no-text.png') }}">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon"

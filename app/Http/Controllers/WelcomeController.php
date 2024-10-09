@@ -43,29 +43,39 @@ class WelcomeController extends Controller
         return $date->format('j') . $suffix;
     }
 
-    public function index()
-    {
-        // Fetching training data once and dividing based on limit
-        $trainingData = Training::orderBy('created_at', 'desc')->limit(6)->get();
-        $limitTraining = $trainingData->slice(0, 4);
-        $limitTrainingfooter = $trainingData->slice(4, 6);
 
-        foreach ($limitTraining as $data) {
-            $data->formatted_tanggal_training = $this->formatDateRange(
-                Carbon::parse($data->tanggal_mulai),
-                Carbon::parse($data->tanggal_selesai)
-            );
-        }
+    public function index() {
+        // Ambil data pelatihan dari database
+        $limitTraining = Training::latest()->limit(8)->get();
 
-        foreach ($limitTrainingfooter as $data) {
-            $data->formatted_tanggal_training = $this->formatDateRange(
-                Carbon::parse($data->tanggal_mulai),
-                Carbon::parse($data->tanggal_selesai)
-            );
-        }
-
-        return view('welcome', compact('limitTraining', 'limitTrainingfooter'));
+        // Kirim data ke view
+        return view('welcome', compact('limitTraining'));
     }
+
+
+    // public function index()
+    // {
+    //     // Fetching training data once and dividing based on limit
+    //     $trainingData = Training::orderBy('created_at', 'desc')->limit(6)->get();
+    //     $limitTraining = $trainingData->slice(0, 4);
+    //     $limitTrainingfooter = $trainingData->slice(4, 6);
+
+    //     foreach ($limitTraining as $data) {
+    //         $data->formatted_tanggal_training = $this->formatDateRange(
+    //             Carbon::parse($data->tanggal_mulai),
+    //             Carbon::parse($data->tanggal_selesai)
+    //         );
+    //     }
+
+    //     foreach ($limitTrainingfooter as $data) {
+    //         $data->formatted_tanggal_training = $this->formatDateRange(
+    //             Carbon::parse($data->tanggal_mulai),
+    //             Carbon::parse($data->tanggal_selesai)
+    //         );
+    //     }
+
+    //     return view('welcome', compact('limitTraining', 'limitTrainingfooter'));
+    // }
 
     public function checkCertificate(Request $request)
     {
