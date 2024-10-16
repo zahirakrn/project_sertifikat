@@ -203,7 +203,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                             {{-- EDIT DATA --}}
                                             <!-- Button yang nge-trigger modal -->
                                             <button type="button" class="btn btn-sm btn-primary"

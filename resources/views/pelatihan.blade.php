@@ -27,9 +27,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="about-img">
-                        <img class="card"
-                            src="{{ asset('images/training/' . $training->cover) }}"
-                            width="500">
+                        <img class="card" src="{{ asset('images/training/' . $training->cover) }}" width="500">
                     </div>
                 </div>
             </div>

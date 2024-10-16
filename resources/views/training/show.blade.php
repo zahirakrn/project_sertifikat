@@ -8,11 +8,11 @@
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
         <title>Show Data Pelatihan</title>
         <meta name="description" content="" />
-        <link rel="icon" href="{{ asset('assets/img/logo/logo.png') }}">
+
 
 
     <!-- Favicon -->
-
+    <link rel="icon" href="{{ asset('assets/img/logo/logo.png') }}">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

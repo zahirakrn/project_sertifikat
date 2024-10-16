@@ -9,10 +9,9 @@
 
     <title>Daftar Pelatihan</title>
     <meta name="description" content="" />
-    <link rel="icon" href="{{ asset('assets/img/logo/logo.png') }}" type="image/png">
-    <link rel="icon" type="image/x-icon"
-        href="{{ asset('assets/img/favicon/favicon.ico"') }}' />
 
+
+    <link rel="icon" href="{{ asset('assets/img/logo/logo.png') }}" type="image/png">
     {{-- Bootstrap 5 --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -120,7 +119,7 @@
                         <div class="card">
                             <div class="row" style="margin-top: 10px;">
                                 <div class="col-10">
-                                    <h5 class="card-header">Data Training Tables</h5>
+                                    <h5 class="card-header">Data Pelatihan Tables</h5>
                                 </div>
 
                                 {{-- CREATE DATA --}}

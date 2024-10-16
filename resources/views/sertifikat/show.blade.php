@@ -155,7 +155,7 @@
                                 <div class="col-xxl">
                                     <div class="card" style="height: 85px">
                                         <!-- Embed PDF preview in an iframe -->
-                                        <center><h5 style="margin-top : 35px;">Sertifikat belum tersedia karena peserta <b>belum</b> selesai pelatihan</h5></center>
+                                        {{-- <center><h5 style="margin-top : 35px;">Sertifikat belum tersedia karena peserta <b>belum</b> selesai pelatihan</h5></center> --}}
                                         <center><h5 style="margin-top : 35px;">Sertifikat belum tersedia karena peserta <b>belum</b> menyelesaikan pelatihan</h5></center>
                                     </div>
                                 </div>

@@ -96,7 +96,6 @@
     <!-- Cek Sertifikat End -->
 
     <!-- Services Start -->
-        <!-- Services Start -->
         <div class="container-fluid service py-5 bg-light" id="service" style="margin-top: -10rem;">
             <div class="container py-5">
                 <div class="container-fluid service py-5 bg-light" id="service">
@@ -173,8 +172,6 @@
                         </div>
                     </div>
                     <div class="row g-4 justify-content-between mb-5">
-                        {{-- <div class="col-xl-5"><a href="#"
-                                        class="btn btn-primary rounded-pill py-3 px-5">Temukan Lebih Lanjut</a></div> --}}
                         <div class="col-xl-7 mb-5">
                             <div class="about-customer d-flex position-relative">
                                 <img src="{{ asset('User/img/customer-img-1.jpg') }}"
@@ -241,5 +238,4 @@
     <!-- About End -->
     </div>
     </div>
-    <!-- Cek Sertifikat End -->
 @endsection
